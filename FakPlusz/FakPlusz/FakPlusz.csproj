@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD1BCA5D-7D56-4BE2-BBEF-DA1EA09E2AD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FakPlusz</RootNamespace>
+    <AssemblyName>FakPlusz</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <DocumentationFile>bin\Debug\FakPlusz.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FormattedTextBox, Version=1.0.4672.14641, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FormattedTextBox\FormattedTextBox\bin\Release\FormattedTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alapcontrolok\Alap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\Alap.Designer.cs">
+      <DependentUpon>Alap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapcontrolok\Alaplista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\Alaplista.Designer.cs">
+      <DependentUpon>Alaplista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapcontrolok\Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapcontrolok\Csakgrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\Csakgrid.Designer.cs">
+      <DependentUpon>Csakgrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapcontrolok\Parameterez.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\Parameterez.Designer.cs">
+      <DependentUpon>Parameterez.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapcontrolok\VezerloAlapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\VezerloAlapControl.Designer.cs">
+      <DependentUpon>VezerloAlapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapcontrolok\Vezerlesek.cs" />
+    <Compile Include="Alapfunkciok\Adattabla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\Azonositok.cs" />
+    <Compile Include="Alapfunkciok\Combok.cs" />
+    <Compile Include="Alapfunkciok\Fak.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\FakUserInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\KezdetiAblak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\KezdetiAblak.Designer.cs">
+      <DependentUpon>KezdetiAblak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapfunkciok\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alapfunkciok\Tablainfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\Tablainfocols.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\Verz_UserCont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alapfunkciok\TablainfoTag.cs" />
+    <Compile Include="Alapfunkciok\Osszefinfo.cs" />
+    <Compile Include="Alapfunkciok\MezoTag.cs" />
+    <Compile Include="Alapcontrolok\Gridpluszinput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alapcontrolok\Gridpluszinput.Designer.cs">
+      <DependentUpon>Gridpluszinput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bejelentkezo.cs" />
+    <Compile Include="BejelformAlap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BejelformAlap.Designer.cs">
+      <DependentUpon>BejelformAlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ceginformaciok.cs" />
+    <Compile Include="Formok\AdatbazisOsszefReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdatbazisOsszefReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formok\AdatbazisOsszefuggesek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\AdatbazisOsszefuggesek.Designer.Cs">
+      <DependentUpon>AdatbazisOsszefuggesek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Adatszolg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Adatszolg.Designer.cs">
+      <DependentUpon>Adatszolg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Altalanos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Altalanos.Designer.cs">
+      <DependentUpon>Altalanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\LeirasOsszefuggesek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\LeirasOsszefuggesek.Designer.cs">
+      <DependentUpon>LeirasOsszefuggesek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\LeirasReport.cs">
+      <DependentUpon>LeirasReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Formok\LeiroTooltipallit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\LeiroTooltipallit.Designer.cs">
+      <DependentUpon>LeiroTooltipallit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\MuszakNaptar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\MuszakNaptar.Designer.cs">
+      <DependentUpon>MuszakNaptar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Naptar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Naptar.Designer.cs">
+      <DependentUpon>Naptar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Tooltipallitkozos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Tooltipallitkozos.Designer.cs">
+      <DependentUpon>Tooltipallitkozos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpwindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpwindow.Designer.cs">
+      <DependentUpon>Helpwindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainAlap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAlap.Designer.cs">
+      <DependentUpon>MainAlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainControlAlap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainControlAlap.Designer.cs">
+      <DependentUpon>MainControlAlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\CsakegyGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\CsakegyGrid.Designer.cs">
+      <DependentUpon>CsakegyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSzamitasok.cs" />
+    <Compile Include="VezerloFormok\TervTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VezerloFormok\TervTreeView.Designer.cs">
+      <DependentUpon>TervTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VezerloFormok\Formvezerles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VezerloFormok\Formvezerles.Designer.cs">
+      <DependentUpon>Formvezerles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageAlap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageAlap.Designer.cs">
+      <DependentUpon>MessageAlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SzerkesztettListak\AltalanosCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AltalanosCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SzerkesztettListak\OldAltalanosCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OldAltalanosCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetek\AltalanosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AltalanosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Altlistazoalap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Altlistazoalap.Designer.cs">
+      <DependentUpon>Altlistazoalap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Attekint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Attekint.Designer.cs">
+      <DependentUpon>Attekint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\BaseKarb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\BaseKarb.Designer.cs">
+      <DependentUpon>BaseKarb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Csoport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Csoport.Designer.cs">
+      <DependentUpon>Csoport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Fogalom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Fogalom.Designer.cs">
+      <DependentUpon>Fogalom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Leirokarb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Leirokarb.Designer.cs">
+      <DependentUpon>Leirokarb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Leiroleirokarb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Leiroleirokarb.Designer.cs">
+      <DependentUpon>Leiroleirokarb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Listainfok.cs" />
+    <Compile Include="SzerkesztettListak\Listaterv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Listaterv.Designer.cs">
+      <DependentUpon>Listaterv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Mezonevek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Mezonevek.Designer.cs">
+      <DependentUpon>Mezonevek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Osszef.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Osszef.Designer.cs">
+      <DependentUpon>Osszef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Listatervalap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Listatervalap.Designer.cs">
+      <DependentUpon>Listatervalap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Statterv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SzerkesztettListak\Statterv.Designer.cs">
+      <DependentUpon>Statterv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Szukkodtab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Szukkodtab.Designer.cs">
+      <DependentUpon>Szukkodtab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formok\Tooltipallit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formok\Tooltipallit.Designer.cs">
+      <DependentUpon>Tooltipallit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetConnStrings.cs" />
+    <Compile Include="MessageBox.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SqlInterface.cs" />
+    <Compile Include="SzerkesztettListak\SzerkesztettAlap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SzerkesztettListak\SzerkesztettAlap.Designer.cs">
+      <DependentUpon>SzerkesztettAlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\ControlAlap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\ControlAlap.Designer.cs">
+      <DependentUpon>ControlAlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Szulogyerekvaltozasok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Szulogyerekvaltozasok.Designer.cs">
+      <DependentUpon>Szulogyerekvaltozasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Tobbgyerek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Tobbgyerek.Designer.cs">
+      <DependentUpon>Tobbgyerek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Valtozasok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Valtozasok.Designer.cs">
+      <DependentUpon>Valtozasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Valtpluszszulogyerek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Valtpluszszulogyerek.Designer.cs">
+      <DependentUpon>Valtpluszszulogyerek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Valtszulopluszszulogyerek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserAlapcontrolok\Valtszulopluszszulogyerek.Designer.cs">
+      <DependentUpon>Valtszulopluszszulogyerek.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Alapcontrolok\Alap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Alap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapcontrolok\Alaplista.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Alaplista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapcontrolok\Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapcontrolok\Csakgrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Csakgrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapcontrolok\Gridpluszinput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Gridpluszinput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapcontrolok\Parameterez.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Parameterez.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapcontrolok\VezerloAlapControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VezerloAlapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapfunkciok\KezdetiAblak.resx">
+      <DependentUpon>KezdetiAblak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alapfunkciok\ProgressForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BejelformAlap.resx">
+      <DependentUpon>BejelformAlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\AdatbazisOsszefReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdatbazisOsszefReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\AdatbazisOsszefuggesek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdatbazisOsszefuggesek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Adatszolg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Adatszolg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Altalanos.resx">
+      <DependentUpon>Altalanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\BaseKarb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseKarb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Csoport.resx">
+      <DependentUpon>Csoport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\LeirasOsszefuggesek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LeirasOsszefuggesek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\LeirasReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LeirasReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\MuszakNaptar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MuszakNaptar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Naptar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Naptar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Osszef.resx">
+      <DependentUpon>Osszef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpwindow.resx">
+      <DependentUpon>Helpwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAlap.resx">
+      <DependentUpon>MainAlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainControlAlap.resx">
+      <DependentUpon>MainControlAlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\ControlAlap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlAlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\CsakegyGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CsakegyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VezerloFormok\TervTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TervTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VezerloFormok\Formvezerles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Formvezerles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageAlap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageAlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\AltalanosCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AltalanosCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\OldAltalanosCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OldAltalanosCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\Altlistazoalap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Altlistazoalap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Fogalom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Fogalom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Leirokarb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Leirokarb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Leiroleirokarb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Leiroleirokarb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\Listaterv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Listaterv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Mezonevek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mezonevek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\Listatervalap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Listatervalap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\Statterv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Statterv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Szukkodtab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Szukkodtab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formok\Tooltipallit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Tooltipallit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SzerkesztettListak\SzerkesztettAlap.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SzerkesztettAlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\Szulogyerekvaltozasok.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Szulogyerekvaltozasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\Tobbgyerek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Tobbgyerek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\Valtozasok.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Valtozasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\Valtpluszszulogyerek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Valtpluszszulogyerek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlapcontrolok\Valtszulopluszszulogyerek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Valtszulopluszszulogyerek.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\ele.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moge.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eldob-16x16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elolrol.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\következö.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rogzit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\töröl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uj.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elözö.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\töröl1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kinyit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\becsuk.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetek\AltalanosDataSet.xsc">
+      <DependentUpon>AltalanosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetek\AltalanosDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AltalanosDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetek\AltalanosDataSet.xss">
+      <DependentUpon>AltalanosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Print.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Statisztika.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiplePagesImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegisterClosed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fömenu.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Üres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Check-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kerdojel-1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lens-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataErrorImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Webhez\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

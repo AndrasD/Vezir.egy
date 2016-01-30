@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{047206DE-205F-44AF-B1EC-85F73701C605}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vezir</RootNamespace>
+    <AssemblyName>Vezir</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FakPlusz, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FakPlusz\FakPlusz\bin\Release\FakPlusz.dll</HintPath>
+    </Reference>
+    <Reference Include="FormattedTextBox, Version=1.0.4672.12751, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FormattedTextBox\FormattedTextBox\bin\Release\FormattedTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Afarpt1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Afarpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CegAllapotok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CegAllapotok.Designer.cs">
+      <DependentUpon>CegAllapotok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dolgeredm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dolgeredm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DolgozoiEredm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DolgozoiEredm.Designer.cs">
+      <DependentUpon>DolgozoiEredm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Beflenbevszla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Beflenbevszla.Designer.cs">
+      <DependentUpon>Beflenbevszla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Befejezetlenbevszla.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Befejezetlenbevszla.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Befejezetlenkoltsszla.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Befejezetlenkoltsszla.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Beflenkoltsszla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Beflenkoltsszla.Designer.cs">
+      <DependentUpon>Beflenkoltsszla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Main\UserParamTabla.cs" />
+    <Compile Include="ENYEM\Lekerdezesek\Afaforgalom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Afaforgalom.Designer.cs">
+      <DependentUpon>Afaforgalom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bevetelekrpt.cs">
+      <DependentUpon>Bevetelekrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Bevkiad.cs">
+      <DependentUpon>Bevkiad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Egyenlegrpt.cs">
+      <DependentUpon>Egyenlegrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ENYEM\Main\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Main\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folyoosztottkivet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Folyoosztottkivet.Designer.cs">
+      <DependentUpon>Folyoosztottkivet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kiadasrpt.cs">
+      <DependentUpon>Kiadasrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ENYEM\Vezerles\AlapParameterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Vezerles\AlapParameterControl.Designer.cs">
+      <DependentUpon>AlapParameterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyobetet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyobetet.Designer.cs">
+      <DependentUpon>Folyobetet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyokivet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyokivet.Designer.cs">
+      <DependentUpon>Folyokivet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyopenztar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyopenztar.Designer.cs">
+      <DependentUpon>Folyopenztar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyofolyo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\BankiPenzmozgas\Folyofolyo.Designer.cs">
+      <DependentUpon>Folyofolyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Egyenleg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Egyenleg.Designer.cs">
+      <DependentUpon>Egyenleg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Technikai\Evnyit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Technikai\Evnyit.Designer.cs">
+      <DependentUpon>Evnyit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Technikai\Evzar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Technikai\Evzar.Designer.cs">
+      <DependentUpon>Evzar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Kiadasok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Kiadasok.Designer.cs">
+      <DependentUpon>Kiadasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Koltsszlakiegyenl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Koltsszlakiegyenl.Designer.cs">
+      <DependentUpon>Koltsszlakiegyenl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Eveseredmeny.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Eveseredmeny.Designer.cs">
+      <DependentUpon>Eveseredmeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarpenztar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarpenztar.Designer.cs">
+      <DependentUpon>Penztarpenztar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarfolyo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarfolyo.Designer.cs">
+      <DependentUpon>Penztarfolyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarkivet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarkivet.Designer.cs">
+      <DependentUpon>Penztarkivet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarbetet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\PenztarPenzmozgas\Penztarbetet.Designer.cs">
+      <DependentUpon>Penztarbetet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Bevetelek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Bevetelek.Designer.cs">
+      <DependentUpon>Bevetelek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Koltsszla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Koltsszla.Designer.cs">
+      <DependentUpon>Koltsszla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Bevszla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Bevszla.Designer.cs">
+      <DependentUpon>Bevszla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Main\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Main\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Main\Program.cs" />
+    <Compile Include="ENYEM\Lekerdezesek\Penzmozgas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Penzmozgas.Designer.cs">
+      <DependentUpon>Penzmozgas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Main\Kukucs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Main\Kukucs.Designer.cs">
+      <DependentUpon>Kukucs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Main\KukucsEredm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Main\KukucsEredm.Designer.cs">
+      <DependentUpon>KukucsEredm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Partner.Designer.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Penzmozgasrpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Penzmozgasrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Befejezetlenbevszla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Befejezetlenbevszla.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Befejezetlenkoltsszla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Befejezetlenkoltsszla.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CegAllapotok.resx">
+      <DependentUpon>CegAllapotok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dolgeredm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dolgeredm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Szamlak\Beflenbevszla.resx">
+      <DependentUpon>Beflenbevszla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\BankiPenzmozgas\Folyobetet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Folyobetet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\BankiPenzmozgas\Folyokivet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Folyokivet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\BankiPenzmozgas\Folyopenztar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Folyopenztar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\BankiPenzmozgas\Folyofolyo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Folyofolyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Afarpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Afarpt1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bevetelekrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bevetelekrpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bevkiad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bevkiad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Egyenlegrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Egyenlegrpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Main\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Vezerles\AlapParameterControl.resx">
+      <DependentUpon>AlapParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Folyoosztottkivet.resx">
+      <DependentUpon>Folyoosztottkivet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kiadasrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Kiadasrpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Technikai\Evnyit.resx">
+      <DependentUpon>Evnyit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Technikai\Evzar.resx">
+      <DependentUpon>Evzar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Szamlak\Koltsszlakiegyenl.resx">
+      <DependentUpon>Koltsszlakiegyenl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Main\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\PenztarPenzmozgas\Penztarbetet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Penztarbetet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\PenztarPenzmozgas\Penztarpenztar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Penztarpenztar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\PenztarPenzmozgas\Penztarfolyo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Penztarfolyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\PenztarPenzmozgas\Penztarkivet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Penztarkivet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Main\Kukucs.resx">
+      <DependentUpon>Kukucs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Main\KukucsEredm.resx">
+      <DependentUpon>KukucsEredm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner.resx">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penzmozgasrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Penzmozgasrpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Szamlak\Bevszla.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Bevszla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Szamlak\Koltsszla.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Koltsszla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Szamlak\UjPartner.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UjPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Szamlak\Bevszlakiegyenl.resx">
+      <DependentUpon>Bevszlakiegyenl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Lekerdezesek\Szerklist.resx">
+      <DependentUpon>Szerklist.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Technikai\Ujhonap.resx">
+      <DependentUpon>Ujhonap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENYEM\Vezerles\VezerloControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VezerloControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase\vezir_alapalkalm.bak" />
+    <None Include="DataBase\vezir_alaprendszer.bak" />
+    <None Include="DataBase\vezir_alapuser.bak" />
+    <None Include="DataBase\vezir_alkalm1.bak" />
+    <None Include="DataBase\vezir_rendszer.bak" />
+    <None Include="DataBase\vezir_user.bak" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\UjPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\UjPartner.Designer.cs">
+      <DependentUpon>UjPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Bevszlakiegyenl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Szamlak\Bevszlakiegyenl.Designer.cs">
+      <DependentUpon>Bevszlakiegyenl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Szerklist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Lekerdezesek\Szerklist.Designer.cs">
+      <DependentUpon>Szerklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Technikai\Ujhonap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Technikai\Ujhonap.Designer.cs">
+      <DependentUpon>Ujhonap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ENYEM\Vezerles\VezerloControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ENYEM\Vezerles\VezerloControl.Designer.cs">
+      <DependentUpon>VezerloControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="VezirDataSet.cs">
+      <DependentUpon>VezirDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VezirDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VezirDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cég.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabGroupVertical.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiplePagesImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankForm.Image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kerdojel-1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegisterClosed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printPreview.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uj.bmp" />
+    <None Include="VezirDataSet.xsc">
+      <DependentUpon>VezirDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VezirDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VezirDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VezirDataSet.xss">
+      <DependentUpon>VezirDataSet.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frissit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TabGroupVertical1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kerdojel-11.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mixer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Refresh-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\töröl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Turn Off-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Previous-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Next-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ele.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moge.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rogzit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elolrol.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Download-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_justity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elözö.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\következö.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1350376768_user8.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
