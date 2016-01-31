@@ -33,11 +33,12 @@ namespace Vezir
             // 
             // panel1
             // 
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Size = new System.Drawing.Size(1175, 796);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 796);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -45,6 +46,7 @@ namespace Vezir
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Main";
             this.Text = "  VEZetöi Információs Rendszer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Closeing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);

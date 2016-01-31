@@ -153,7 +153,7 @@ namespace FakPlusz.Alapfunkciok
                 return;
             }
             //Sqlinterface.Select(dtcegek, _userconn, "CEGEK", "", "CEG_ID", false);
-            string kezdevho = DateTime.Today.ToShortDateString().Substring(0, 8) + "01";
+            string kezdevho = DateTime.Today.ToShortDateString().Substring(0, 8) + ".01";
             DateTime modkezdetedatum = Convert.ToDateTime(kezdevho);
             DateTime modvegedatum = modkezdetedatum.AddMonths(1).AddDays(-1);
             string vegevho = DatumToString(modvegedatum);

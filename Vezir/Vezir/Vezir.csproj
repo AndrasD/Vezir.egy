@@ -47,9 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\FakPlusz\FakPlusz\bin\Release\FakPlusz.dll</HintPath>
     </Reference>
-    <Reference Include="FormattedTextBox, Version=1.0.4672.12751, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FormattedTextBox, Version=1.0.4672.14641, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FormattedTextBox\FormattedTextBox\bin\Release\FormattedTextBox.dll</HintPath>
+      <HintPath>..\..\FakPlusz\FakPlusz\bin\Release\FormattedTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -443,6 +443,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DataBase\vezir_alapalkalm.bak" />
     <None Include="DataBase\vezir_alaprendszer.bak" />
     <None Include="DataBase\vezir_alapuser.bak" />
@@ -491,7 +492,6 @@
     <Compile Include="Settings.cs" />
     <Compile Include="VezirDataSet.cs">
       <DependentUpon>VezirDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="VezirDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
